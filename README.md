@@ -77,6 +77,8 @@ sail build --no-cache
 sail up
 ```
 
+-   When you use Sail, the commands npm, artisan and composer MUST be used with sail command.
+
 ## Telescope (for local development)
 
 Follow the guide here: [Laravel Tescope Install guide](https://laravel.com/docs/8.x/telescope#local-only-installation)
@@ -91,6 +93,14 @@ protected function gate()
     });
 }
 
+```
+
+## Ui Tailwind CSS
+View on [Git](https://github.com/laravel-frontend-presets/tailwindcss)
+```
+composer require laravel-frontend-presets/tailwindcss --dev
+php artisan ui tailwindcss --auth
+npm install && npm run dev
 ```
 
 ## License
