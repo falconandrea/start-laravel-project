@@ -103,13 +103,33 @@ php artisan ui tailwindcss --auth
 npm install && npm run dev
 ```
 
-## Notes
+### Notes
 
 If you get error `sh: mix: command not found`
 
 ```
 npm install laravel-mix@latest
 ```
+
+## For secondary database for test
+Create file `.env.testing` duplicated from `.env` and change only this row:
+```
+DB_HOST=mysql_test
+```
+Update `docker-compose.yml` with this rows
+```
+mysql_test:
+    image: "mysql:8.0"
+    environment:
+        MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+        MYSQL_DATABASE: "${DB_DATABASE}"
+        MYSQL_USER: "${DB_USERNAME}"
+        MYSQL_PASSWORD: "${DB_PASSWORD}"
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    networks:
+        - sail
+```
+
 
 ## License
 
