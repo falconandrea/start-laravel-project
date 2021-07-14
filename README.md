@@ -111,7 +111,7 @@ If you get error `sh: mix: command not found`
 npm install laravel-mix@latest
 ```
 
-## For secondary database for test
+## For create secondary database for test
 Create file `.env.testing` duplicated from `.env` and change only this row:
 ```
 DB_HOST=mysql_test
@@ -129,6 +129,7 @@ mysql_test:
     networks:
         - sail
 ```
+And use command `sail test` for run the test
 
 
 ## License
