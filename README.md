@@ -103,6 +103,14 @@ php artisan ui tailwindcss --auth
 npm install && npm run dev
 ```
 
+## Notes
+
+If you get error `sh: mix: command not found`
+
+```
+npm install laravel-mix@latest
+```
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
