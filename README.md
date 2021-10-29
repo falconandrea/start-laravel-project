@@ -12,6 +12,7 @@
 ## Initial
 
 ### Update file .env
+Not use Root as user.
 
 ```
 APP_NAME="Laravel Project"
